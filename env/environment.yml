@@ -1,0 +1,11 @@
+name: metabingv4
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - ncbi-datasets-cli
+  - jq
+  - unzip
+  - python=3.8
+  - blast
