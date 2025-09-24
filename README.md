@@ -46,7 +46,7 @@ This will create a directory `test_db/` containing downloaded genomes and taxono
 ./bin/build_db.sh --db DBNAME --library TYPE [--srs|--lrs] [--kmer-size N] [--output FILE]
 ```
 
-### Options:
+### Arguments:
 
 * `--db, -d DBNAME` : database name (must match the download step).
 * `--library, -l TYPE` : same library type as in download step (`archaea`, `bacteria`, `fungi`, `protozoa`).
