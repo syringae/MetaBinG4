@@ -11,13 +11,8 @@ Compile all required binaries:
 
 ```bash
 make
-
-This will build the executables and place them in the `bin/` directory:
-
-* `taxonomy_downloader`
-* `genPathFiles`
-* `DB_compress`
-* `DB_unique`
+```
+This will build the executables and place them in the `bin/` directory
 
 ---
 
@@ -55,7 +50,7 @@ This will create a directory `test_db/` containing downloaded genomes and taxono
 
 * `--db, -d DBNAME` : database name (must match the download step).
 * `--library, -l TYPE` : same library type as in download step (`archaea`, `bacteria`, `fungi`, `protozoa`).
-* `--srs` : build a **short-read (SRS)** database.
+* `--srs` : build a **short-read (SRS)** database (default mode).
 * `--lrs` : build a **long-read (LRS)** database.
 * `--kmer-size, -k N` : (SRS only) specify k-mer size (default: `6`).
 * `--output, -o FILE` : output prefix for the database.
