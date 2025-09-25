@@ -20,7 +20,7 @@ This will build the executables and place them in the `bin/` directory
 ### 1.1 Download genomes and taxonomy
 
 ```bash
-./bin/download_genomes.sh -d DBNAME -l TYPE
+./download_genomes.sh -d DBNAME -l TYPE [-a ASSEMBLY-LEVEL]
 ```
 
 * `DBNAME`: output directory name
@@ -33,7 +33,7 @@ and prepares taxonomy files.
 **Usage example:**
 
 ```bash
-./bin/download_genomes.sh -d test_db -l bacteria
+./download_genomes.sh -d test_db -l bacteria 
 ```
 
 This will create a directory `test_db/` containing downloaded genomes and taxonomy.
@@ -43,7 +43,7 @@ This will create a directory `test_db/` containing downloaded genomes and taxono
 ### 1.2 Construct the database
 
 ```bash
-./bin/build_db.sh --db DBNAME --library TYPE [--srs|--lrs] [--kmer-size N] [--output FILE]
+./build_db.sh --db DBNAME --library TYPE [--srs|--lrs] [--kmer-size N] [--output FILE]
 ```
 
 ### Arguments:
@@ -58,7 +58,7 @@ This will create a directory `test_db/` containing downloaded genomes and taxono
 ### Short-read mode (SRS)
 
 ```bash
-./bin/build_db.sh -d test_db -l bacteria --srs
+./build_db.sh -d test_db -l bacteria --srs
 ```
 
 This will create a short-read database using **k = 6** (default) in 'test_db/'.
@@ -66,7 +66,7 @@ This will create a short-read database using **k = 6** (default) in 'test_db/'.
 ### Long-read mode (LRS)
 
 ```bash
-./bin/build_db.sh -d test_db -l bacteria --lrs
+./build_db.sh -d test_db -l bacteria --lrs
 ```
 
 This will create a long-read database in `test_db/`.
@@ -78,7 +78,7 @@ After building the database, you can classify your sequencing reads using the un
 ### Long-read mode (LRS)
 
 ```bash
-./bin/classify.sh --lrs -d DBNAME -i INPUT -o OUTPUT [--fasta|--fastq] [-t THREADS]
+./classify.sh --lrs -d DBNAME -i INPUT -o OUTPUT [--fasta|--fastq] [-t THREADS]
 ````
 
 **Arguments:**
@@ -93,7 +93,7 @@ After building the database, you can classify your sequencing reads using the un
 ### Short-read mode (SRS, MetaBinGv4)
 
 ```bash
-./bin/classify.sh --srs -d DBNAME -i INPUT -o OUTPUT [-t THREADS]
+./classify.sh --srs -d DBNAME -i INPUT -o OUTPUT [-t THREADS]
 ```
 
 **Arguments:**
