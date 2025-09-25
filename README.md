@@ -20,7 +20,7 @@ This will build the executables and place them in the `bin/` directory
 ### 1.1 Download genomes and taxonomy
 
 ```bash
-./download_genomes.sh -d DBNAME -l TYPE [-a ASSEMBLY-LEVEL]
+./download_genomes.sh --db DBNAME -l TYPE [--assembly-level ASSEMBLY-LEVEL]
 ```
 
 * `DBNAME`: output directory name
@@ -77,8 +77,9 @@ After building the database, you can classify your sequencing reads using the un
 
 ### Long-read mode (LRS)
 
+# Step 2. Classification
 ```bash
-./classify.sh --lrs -d DBNAME -i INPUT -o OUTPUT [--fasta|--fastq] [-t THREADS]
+./classify.sh --db DBNAME -i INPUT -o OUTPUT [--srs|--lrs] [--fasta|--fastq] [-t THREADS]
 ````
 
 **Arguments:**
