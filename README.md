@@ -71,13 +71,13 @@ This will create a short-read database using **k = 6** (default) in 'test_db/'.
 
 This will create a long-read database in `test_db/`.
 
-# Step 2. Classification
+## Step 2. Classification
 
 After building the database, you can classify your sequencing reads using the unified wrapper `classify.sh`.
 
 ### Long-read mode (LRS)
 
-# Step 2. Classification
+## Step 2. Classification
 ```bash
 ./classify.sh --db DBNAME -i INPUT -o OUTPUT [--srs|--lrs] [--fasta|--fastq] [-t THREADS]
 ````
