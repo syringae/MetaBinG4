@@ -104,6 +104,12 @@ After building the database, you can classify your sequencing reads using the un
 * `-t THREADS` : number of threads (default: 1).
 * `-d DBNAME` : (optional) database directory, default is `srs_db` under current folder.
 
+## Step 3. Translation (optional)
+```bash
+./translate -i input -o output [-T TAXONOMY-DIR]
+ ```
+
+,where input is the result of the previous classification process.
 
 
 
